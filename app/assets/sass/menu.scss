@@ -1,0 +1,33 @@
+@import 'variables';
+
+menu {
+    background-color: $purple;
+    height: 42px;
+    width: 100%;
+
+    ul {
+        li {
+            line-height: 42px;
+            color: $pure-white;
+            display: inline-block;
+            padding: 0 10px;
+            text-transform: uppercase;
+            text-align: center;
+            min-width: 100px;
+
+            .material-icons {
+                vertical-align: middle;
+            }
+
+            a {
+                color: $pure-white;
+                text-decoration: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $dark-purple;   
+            }
+        }
+    }
+}

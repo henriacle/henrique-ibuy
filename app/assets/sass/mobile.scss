@@ -1,0 +1,81 @@
+@media screen and (max-width: 1023px) {
+    .titulo-pedido {
+        span {
+            width: 100%;
+            font-size: 16px;
+            padding-top: 10px;
+            display: block;
+        }
+
+        p {
+            width: 100%;
+            font-size: 16px;
+            display: inline-block;
+        }
+    }
+        
+    .product-slider {
+        display: none;
+    }
+
+    .product {
+        border-left: none;
+        display: inline-block;
+        height: 350px;
+        text-align: center;
+        width: 300px;
+        margin-bottom: 40px;        
+    }
+
+    .section-name {
+        background-size: 100%;
+        font-size: 1.5em;
+        height: 91px;
+        line-height: 39px;
+        margin: 50px auto 100px auto;
+        width: 100%;
+        background-repeat: no-repeat;
+    }
+
+    footer {
+        a {
+            position: relative;            
+        }
+    }
+
+    .detalhe {
+        .product {
+            width: 100%;
+
+            button {
+                width: 100%;
+                
+                span {
+                    font-size: 16px;                    
+                }
+            }
+        }
+    }
+
+    header {
+        .search-bar {
+            margin: 20px 0;
+            width: 100%;
+
+            span {
+                font-size: 12px;
+            }
+        }        
+
+        .selected-products {
+            position: fixed;
+            right: 0;
+            top: 50px;
+            width: 100%;        
+        }        
+    }
+
+    .login-box {
+        width: 100%;
+    }
+}

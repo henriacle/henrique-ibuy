@@ -1,0 +1,31 @@
+<div class="container detalhe">
+    <h2>{{detalhe.produto.nome}}</h2>
+    
+    <div class="product">
+        <img src="/app/assets/img/{{detalhe.produto.img}}.png">
+        <div class="pricing" ng-class="{
+            'promo': detalhe.produto.isPromo
+        }" >
+            <span class="old-price"> 
+                <small>de:</small>
+                <p>{{detalhe.produto.oldPrice | currency:"R$"}}</p>
+            </span>
+            <span class="current-price">
+                <small>por:</small>
+                <p>{{detalhe.produto.currentPrice | currency:"R$" }}</p>
+            </span>
+
+            <button ng-click="detalhe.selecionaProduto(detalhe.produto)">
+                <span>Adicionar</span>
+                <i class="material-icons">shopping_cart</i>
+            </button>            
+        </div>
+
+        <div class="detalhe">
+            <h4>DETALHE</h4>
+            <p>
+                {{detalhe.produto.detail}}
+            </p>
+        </div>
+    </div>
+</div>

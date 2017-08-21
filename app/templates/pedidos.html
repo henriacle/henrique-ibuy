@@ -1,0 +1,33 @@
+<div class="container carrinho-completo">
+    <div class="selected-products">
+        <h5>Meus pedidos</h5>
+
+        <span ng-if="pedidos.listaPedidos.length < 1">Nenhum produto no seu carrinho</span>
+
+        <div ng-repeat="pedido in pedidos.listaPedidos track by pedido.idPedido">
+            <div class="titulo-pedido">
+                <p>Número do pedido: {{pedido.idPedido}}</p>
+                <span class="dataDoPedido">data do pedido: {{pedido.dataDoPedido | date:'dd/MM/yyyy HH:mm:ss'}}</span>                
+            </div>
+            <ul class="products-list">
+                <li ng-repeat="produto in pedido.produtosSelecionados track by produto.id">
+                    <div class="left-data">
+                        <img src="/app/assets/img/{{produto.img}}.png" />
+                    </div>
+                    <div class="right-data">
+                        <p class="title">{{produto.nome}}</p>
+                        <p class="half">QTD: <input type="number" ng-model="produto.qtd"></p>
+                        <p class="half price">
+                            {{produto.currentPrice | currency: 'R$'}}
+                            <button class="cancel material-icons" ng-click="carrinho.remove($index)">close</button>
+                        </p>
+                    </div>
+                </li>
+
+                <li class="total">
+                    Total (sem frete) : {{pedido.total | currency: 'R$'}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

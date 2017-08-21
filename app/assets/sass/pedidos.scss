@@ -1,0 +1,18 @@
+@import '_variables';
+
+.titulo-pedido {
+    width: 100%; 
+    display: block;
+    border-bottom: 1px solid $divider; 
+    padding: 30px 0;
+    background-color: $dark-purple; 
+    color:$pure-white;
+
+    p {
+        width: 50%;font-size: 32px;display: inline-block;
+    }
+
+    span {
+        width: 50%;font-size: 32px;
+    }
+}

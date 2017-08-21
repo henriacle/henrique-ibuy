@@ -1,0 +1,249 @@
+@import '_variables';
+
+header {
+    background-color: $green-lime;
+    height: auto;
+    padding: 20px 0;
+    width: 100%;
+
+    .logo {
+        background-image:url('/app/assets/img/logo.png');
+        display: inline-block;
+        height: 62px;
+        position: relative;
+        width: 87px;
+        margin: 0 20px;
+        vertical-align: top;
+    }
+    
+    .search-bar {
+        display: inline-block;
+        width: 50%;
+        vertical-align: super;
+        
+        span {
+            color: $pure-white;
+            display: inline-block;
+            padding-bottom: 5px;
+            text-align: right;
+            width: 100%;
+        }
+
+        input[type="text"] {
+            border: 0;
+            border-radius: 5px;
+            height: 40px;
+            padding-left: 10px;
+            width: 100%;
+        }
+    }
+
+    .user-badge {
+        color: #fff;
+        display: inline-block;
+        max-width: 200px;
+        padding: 0 20px;
+        vertical-align: middle;
+
+        span {
+            clear: right;
+            display: inline-block;
+            font-size: 15px;
+            max-width: 140px;
+            text-align: left;
+        }
+
+        .material-icons {
+            display: inline-block;
+            font-size: 3em;
+            height: 60px;
+            vertical-align: middle;
+        }        
+    }
+
+    .shopping-cart {
+        color: #fff;
+        display: inline-block;
+        max-width: 200px;
+        padding: 0 20px;
+        vertical-align: middle;
+
+        .material-icons {
+            display: inline-block;
+            font-size: 3em;
+            height: 60px;
+            position: relative;
+            vertical-align: middle;
+
+            > span {
+                background-color: $pastel-red;
+                border-radius: 50%;
+                font-size: 16px;
+                height: 30px;
+                line-height: 30px;
+                position: absolute;
+                right: -15px;
+                text-align: center;
+                top: -10px;
+                width: 30px;
+            }            
+        }        
+    }
+    
+    .selected-products {
+        background-color: #ffffff;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        border-radius: 10px;
+        color: #000;
+        font-size: 12px;
+        height: 0px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        margin-top: 20px;
+        width: 400px;
+        z-index: 99999;
+
+        &.active {
+            height: auto;
+        }
+
+        &::before {
+            content: '';
+            top: -10px;
+            right: 13px;
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $pure-white;
+        }
+
+        .total {
+            border-top: 1px dashed $divider;
+            color: $money-green;
+            font-size: 21px;
+            padding: 10px 20px 0 10px;
+            text-align: right;
+        }
+
+        .actions {
+            border-top: 1px solid $divider;
+            display: block;
+            float: left;
+            margin: 10px 0;
+            padding: 10px 0;
+            width: 100%;
+
+            a {
+                color: #000;
+                margin-right: 25px;
+                text-indent: 10px;
+                text-transform: uppercase;
+                text-decoration: none;
+                vertical-align: middle;
+
+                &:hover {
+                    color: $money-green;
+                }
+            }
+
+            button {
+                color: $pure-white;
+                background-color: $money-green;
+                border: none;
+                cursor: pointer;
+                font-size: 21px;
+                margin-right: 10px;
+                height: 50px;
+                padding: 0 20px 0 20px;
+                text-transform: uppercase;
+
+                a {
+                    color: $pure-white;
+                    width: 100%;
+                    margin: 0;
+                }
+
+                &:hover {
+                    background-color: $green-lime;
+
+                    a {
+                        color: $pure-white;
+                    }
+                }
+            }
+        }
+
+        h5 {
+            border-bottom: 1px solid $divider;
+            font-size: 14px;
+            padding: 5px 0;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            width: 100%;
+        }        
+
+        .products-list {
+            float: left;
+            width: 100%;
+
+            li {
+                display: block;
+                float: left;
+                width: 100%;
+            }
+    
+            > img {
+                width: 100px;
+                height: auto;
+                float: left;
+            }
+    
+            .left-data {
+                float: left;
+                width: 100px;
+
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+    
+            .right-data {
+                float: left;
+                padding-left: 20px;
+                width: calc(100% - 100px);
+    
+                p {
+                    display: block;
+                    clear: both;
+                    position: relative;
+                    text-align: left;
+                    width: 100%;
+
+                    &.title {
+                        font-size: 14px;
+                        font-weight: bold;
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 5px;                        
+                    }
+
+                    &.half {
+                        display: inline-block;
+                        padding: 0;
+                        margin: 0;
+                        width: 50%;
+                    }
+
+                    &.price {
+                        font-size: 21px;
+                        padding-top: 5px;
+                        text-align: center;
+                        color: $money-green;
+                    }
+                }
+            }
+        }
+    }    
+}                                                                                       

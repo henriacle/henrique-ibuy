@@ -1,0 +1,146 @@
+@import 'variables';
+
+.section-name {
+    background-image: url('/app/assets/img/ribbon-purple.png');
+    color: $pure-white;
+    font-size: 2em;
+    height: 91px;
+    line-height: 50px;
+    margin: 50px auto 100px auto;
+    text-align: center;
+    width: 507px;
+}
+
+.product {
+    border-left: 1px solid $divider;
+    display: inline-block;    
+    height: 350px;
+    text-align: center;
+    width: 300px;
+    
+    h4 {
+        font-size: 14pt;
+        text-align: center;
+    }
+    
+    img {
+        margin: 50px 0 ;
+        width: 177px;
+        height: 118px;
+    }
+
+    .pricing {
+        position: relative;
+
+        &.promo {
+            small,
+            .old-price {
+                display: inline-block;
+            }
+        }
+
+        small,
+        .old-price {
+            display: none;
+        }
+
+        .old-price {
+            color: $pastel-red;
+            left: 0;
+            margin-top: -30px;
+            position: absolute;
+            right: 0;
+            
+            small {
+                font-size: 12px;
+            }
+
+            p {
+                display: inline-block;
+                font-size: 21px;
+                text-decoration: line-through;                
+            }
+        }
+
+        .current-price {
+            color: $money-green;
+            display: inline-block;
+            
+            small {
+                font-size: 21px;
+            }
+
+            p {
+                display: inline-block;
+                font-size: 32px;                
+            }
+        }        
+    }
+
+    button {
+        background-color: $money-green;
+        border: none;
+        border-radius: 5px;
+        color: $pure-white;
+        display: inline-block;
+        height: 60px;
+        font-size: 21px;
+        line-height: 20px;
+        margin: 20px 0;
+        width: 220px;
+
+        span {
+            font-size: 26px;
+            text-transform: uppercase;            
+        }
+
+        .material-icons {
+            vertical-align: bottom;
+        }
+    }
+}
+
+.detalhe {
+    h2 {
+        font-size: 26px;
+        padding: 20px 0;
+        color: $purple;
+        border-bottom: 1px solid $dark-purple;
+    }
+
+    h4 {
+        border-top: 1px solid $dark-purple;
+        border-bottom: 1px solid $dark-purple;
+        color: $purple;
+        font-size: 21px;
+        padding: 10px 0;
+        margin: 10px 0;
+    }    
+
+    .old-price  {
+        position: relative !important;
+    }
+
+    .current-price {
+        width: 100%;
+    }
+
+    .product {
+        border: none;
+        width: 60%;
+        height: auto;
+        margin: auto;
+
+        img {
+            margin: 0 !important;
+            display: inline-block;
+        }
+
+        .pricing {
+            padding: 20px;
+            display: inline-block;
+            width: 40%;
+            vertical-align: text-bottom;
+        }
+    }
+}

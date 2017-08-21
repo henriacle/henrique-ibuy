@@ -1,0 +1,38 @@
+
+
+<section class="product-slider" id="product-slider">
+    <div class="slider">
+        <div class="slider-item"></div>
+    </div>
+</section>
+
+<section id="products">
+    <div class="container">
+        <div class="section-name">
+            Destaques
+        </div>
+
+        <div class="product" ng-repeat="produto in produtos.listaDeProdutos track by produto.id">
+            <h4 ng-click="produtos.verDetalhes(produto)">{{produto.nome}}</h4>
+            <img ng-click="produtos.verDetalhes(produto)" src="/app/assets/img/{{produto.img}}.png">
+            <div ng-class="{
+                'promo': produto.isPromo
+            }" class="pricing">
+                <span class="old-price"> 
+                    <small>de:</small>
+                    <p>{{produto.oldPrice | currency:"R$"}}</p>
+                </span>
+                <span class="current-price">
+                    <small>por:</small>
+                    <p>{{produto.currentPrice | currency:"R$" }}</p>
+                </span>
+            </div>
+            
+            <button ng-click="produtos.selecionaProduto(produto)">
+                <span>Adicionar</span>
+                <i class="material-icons">shopping_cart</i>
+            </button>
+        </div>
+    </div>
+</section>
+

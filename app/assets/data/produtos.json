@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "nome": "Chocolate Lacta Bis Oreo 100,8g",
+        "img": "produto-bis",
+        "isPromo": false,
+        "oldPrice": 0,
+        "currentPrice": 3.99,
+        "detail": "Biscoito waffle bis"
+    },
+    {
+        "id": 1,
+        "nome": "Leite condensado italac 395g",
+        "img": "leite-condensado-italac",
+        "isPromo": false,
+        "oldPrice": 0,
+        "currentPrice": 3.99,
+        "detail": "Leite condensado 395g"        
+    },
+    {
+        "id": 2,
+        "nome": "Bolacha trakinas",
+        "img": "bolacha-trakinas",
+        "isPromo": false,
+        "oldPrice": 0,
+        "currentPrice": 3.99,
+        "detail": "Biscoito de chocolate"        
+    },
+    {
+        "id": 3,
+        "nome": "Picanha friboi A",
+        "img": "picanha-friboi",
+        "isPromo": true,
+        "oldPrice": 69.90,
+        "currentPrice": 40.90,
+        "detail": "Carne premium"        
+    }                   
+]

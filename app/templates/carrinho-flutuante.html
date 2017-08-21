@@ -1,0 +1,33 @@
+<i class="material-icons">shopping_cart
+    <span>{{produtosSelecionados.length}}</span>
+
+    <div class="selected-products">
+        <h5>Meu carrinho</h5>
+
+        <ul class="products-list">
+            <li ng-repeat="produto in produtosSelecionados track by produto.id">
+                <div class="left-data">
+                    <img src="/app/assets/img/{{produto.img}}.png" />                                        
+                </div>
+                <div class="right-data">
+                    <p class="title">{{produto.nome}}</p>
+                    <p class="half">QTD: {{produto.qtd}}</p>
+                    <p class="half price">{{produto.currentPrice | currency: 'R$'}}</p>                                        
+                </div>
+            </li>
+
+            <li class="total">
+                Total (sem frete) : {{produtosSelecionados | somaTotal | currency: 'R$'}}
+            </li>
+        </ul>
+
+        <div class="actions">
+            <a href="#!/carrinho">Ir para o carrinho</a>
+            <button>
+                <a href="#!/carrinho">
+                    Fechar pedido
+                </a>
+            </button>
+        </div>
+    </div>      
+</i>

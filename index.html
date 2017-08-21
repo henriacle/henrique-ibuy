@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="ng-ibuy">
+    <head>
+        <title>IBUY - a sua lista de compras</title>
+        <link rel="stylesheet" href="app/assets/css/style.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no">        
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <a href="#!/" class="logo"></a>
+                <div class="search-bar">
+                    <span>Atendimento | contato pelo telefone (11)555-56513</span>
+                    <input type="text" placeholder="Procure um produto">
+                </div>
+                <div class="user-badge">
+                    <i class="material-icons">face</i>
+                    <span>Olá, {{(userData.isLogged === true) ?  userData.userName : 'Visitante'}} <br> 
+                        <a  style="color: #fff;" ng-if="userData.isLogged === true" href="#!/meus-pedidos">Meus pedidos</a>
+                    </span>
+                </div>
+                <open-cart class="shopping-cart"></open-cart>
+            </div>
+        </header>
+        
+        <menu>
+            <div class="container">
+                <ul>
+                    <li><a href="#!/">Home</a></li>
+                    <!-- <li>
+                        <i class="material-icons">
+                                menu
+                            </i>
+                    </li> -->
+                    <!-- <li>Cozinha</li>
+                    <li>Saúde</li>
+                    <li>Higiene</li>
+                    <li>Beleza</li>
+                    <li>Limpeza</li>
+                    <li>Decoração</li>
+                    <li>Petshop</li>
+                    <li>Veículo</li>
+                    <li>Praia</li> -->
+                </ul>
+            </div>
+        </menu>
+
+        <div id="main-view" ng-view></div>
+
+        <footer>
+            IBUY - 2017
+        
+            <a href="http://www.isketi.com.br">
+                Made by Henrique Assunção
+            </a>
+        </footer>
+
+        <script src="/app/assets/js/angular.min.js"></script>
+        <script src="/app/assets/js/angular-locale_pt-br.js"></script>
+        <script src="/app/assets/js/angular-route.js"></script>
+        <script src="/app/assets/js/app.js"></script>
+    </body>
+</html>

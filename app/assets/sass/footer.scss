@@ -1,0 +1,19 @@
+@import 'variables';
+
+footer {
+    background-color: $purple;
+    color: $pure-white;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 50px;
+    text-align: center;
+
+    a {
+        color: $pure-white;
+        float: right;
+        position: absolute;
+        right: 0;
+        padding-right: 50px;
+        text-decoration: unset;
+    }
+}

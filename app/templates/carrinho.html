@@ -1,0 +1,33 @@
+<div class="container carrinho-completo">
+    <div class="selected-products">
+        <h5>Meu carrinho</h5>
+
+        <span ng-if="produtosSelecionados.length < 1">Nenhum produto no seu carrinho</span>
+
+        <div ng-if="produtosSelecionados.length > 0 ">
+            <ul class="products-list">
+                <li ng-repeat="produto in produtosSelecionados track by produto.id">
+                    <div class="left-data">
+                        <img src="/app/assets/img/{{produto.img}}.png" />
+                    </div>
+                    <div class="right-data">
+                        <p class="title">{{produto.nome}}</p>
+                        <p class="half">QTD: <input type="number" ng-model="produto.qtd"></p>
+                        <p class="half price">
+                            {{produto.currentPrice | currency: 'R$'}}
+                            <button class="cancel material-icons" ng-click="carrinho.remove($index)">close</button>
+                        </p>
+                    </div>
+                </li>
+
+                <li class="total">
+                    Total (sem frete) :  {{produtosSelecionados | somaTotal | currency: 'R$'}}
+                </li>
+            </ul>
+
+            <div class="actions">
+                <button ng-click="carrinho.fecharPedido(produtosSelecionados)">Fechar pedido</button>
+            </div>
+        </div>
+    </div>
+</div>
